@@ -1,0 +1,8 @@
+Class: Temperature
+Data: 
+  currentTemp : int , current temperaure of the system.
+  minTemp : int , temperature at which system automatically termintaes.
+  maxTemp : int , temperature at which system automatically turns on.
+  
+Methods:
+
