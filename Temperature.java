@@ -21,6 +21,8 @@ public class Temperature {
 	}
 	/* methods */
 	
+	//setters 
+	
 	public void setCurrTemp(int t){
 		currTemp = t;
 	}
@@ -32,6 +34,8 @@ public class Temperature {
 	public void setMaxTemp( int t){
 		maxTemp = t;
 	}
+	
+	//getters
 
 	public int getCurrTemp(){
 		return currTemp;
