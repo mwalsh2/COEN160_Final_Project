@@ -14,6 +14,11 @@ public class Temperature {
 		maxTemp = 100;
 	}
 	
+	Temperature(int c, int mi, int ma){
+		currTemp = c;
+		minTemp = mi;
+		maxTemp = ma;
+	}
 	/* methods */
 	
 	public void setCurrTemp(int t){
