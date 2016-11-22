@@ -13,8 +13,10 @@ public class Schedule {
 	private JLabel monMin, tueMin, wedMin, thuMin, friMin, satMin, sunMin; //to say "minutes" after last combobox
 	private JLabel scheduleLabel; //to label the schedule section
 	private int monTimeRun, tueTimeRun, wedTimeRun, thuTimeRun, friTimeRun, satTimeRun, sunTimeRun; //length to run water use
+	private int monTimeStart, tueTimeStart, wedTimeStart, thuTimeStart, friTimeStart, satTimeStart, sunTimeStart; //time start run
 	Calendar rightNow = Calendar.getInstance(); //use to work with time
 	int DayOfWeek = rightNow.get(rightNow.DAY_OF_WEEK); //get the day of the week
+	
 	
 	/* constructor */
 	
@@ -26,6 +28,15 @@ public class Schedule {
 		thuTimeRun = 0;
 		friTimeRun = 0;
 		satTimeRun = 0;
+		
+		//will eventually be in minutes - map to drop down options, those labels being in human time
+		sunTimeStart = 0;
+		monTimeStart = 0;
+		tueTimeStart = 0;
+		wedTimeStart = 0;
+		thuTimeStart = 0;
+		friTimeStart = 0;
+		satTimeStart = 0;
 	}
 	
 	/* methods */
