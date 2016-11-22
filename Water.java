@@ -34,6 +34,6 @@ public class Water {
 	
 	//add the amount of water used
 	public void setToday(int temp){
-		today = temp;
+		today += temp;
 	}
 }

@@ -21,6 +21,8 @@ public class Temperature {
 	}
 	/* methods */
 	
+
+	
 	//setters 
 	
 	public void setCurrTemp(int t){
