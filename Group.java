@@ -73,11 +73,12 @@ public class Group {
 			return 3;
 		if (!s4.getWorking())
 			return 4;
+		return 0;
 	}
 	
 	// returns true if any sprinkler in group is active 
 	public int getActive(){
-		int counter=0; //counts how many sprinklers are on in the group
+		int count=0; //counts how many sprinklers are on in the group
 		if (s1.getActive())
 			count++;
 		if (s2.getActive())
