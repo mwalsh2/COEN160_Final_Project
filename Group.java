@@ -1,3 +1,4 @@
+package sourceSystem;
 
 public class Group {
 	/* data */
@@ -33,31 +34,21 @@ public class Group {
 		s3.setActive(active);
 		s4.setActive(active);
 	}
-	
-	// returns sprinkler number of broken sprinkler in a group
-	public int getBroken(){
-		if (!s1.getWorking())
-			return 1;
-		if (!s2.getWorking())
-			return 2;
-		if (!s3.getWorking())
-			return 3;
-		if (!s4.getWorking())
-			return 4;
-		return 0;
-	}
-	
-	// returns number of active sprinklers 
+
 	public int getActive(){
-		int count=0; //counts how many sprinklers are on in the group
-		if (s1.getActive())
+		int count = 0;
+		if(s1.getActive()){
 			count++;
-		if (s2.getActive())
+		}
+		if(s2.getActive()){
 			count++;
-		if (s3.getActive())
+		}
+		if(s3.getActive()){
 			count++;
-		if (s4.getActive())
+		}
+		if(s4.getActive()){
 			count++;
+		}
 		return count;
 	}
 }

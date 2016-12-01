@@ -1,8 +1,13 @@
+package sourceSystem;
 import javax.swing.*;
 public class Garden {
 	
 	/* data */	
-	Group North, South, West, East; //four groups
+	private Group North, South, West, East; //four groups
+	public boolean [] noSet = new boolean[7]; //whether or not set to go each day
+	public boolean [] soSet = new boolean[7]; //whether or not set to go each day
+	public boolean [] weSet = new boolean[7]; //whether or not set to go each day
+	public boolean [] eaSet = new boolean[7]; //whether or not set to go each day
 	
 	/* constructor */
 	Garden(){
@@ -10,8 +15,17 @@ public class Garden {
 		South = new Group();
 		West = new Group();
 		East = new Group();
+		for(int i = 0; i < 7; i++){
+			noSet[i] = false;
+			soSet[i] = false;
+			weSet[i] = false;
+			eaSet[i] = false;
+		}
 	}
 	
+	/* methods */
+	
+	// turn off all groups
 	public void turnOff(){
 		North.turnOff();
 		South.turnOff();
@@ -19,51 +33,30 @@ public class Garden {
 		East.turnOff();
 	}
 	
+	public Group getNorth(){
+		return North;
+	}
+	
+	public Group getSouth(){
+		return South;
+	}
+	
+	public Group getEast(){
+		return East;
+	}
+	
+	public Group getWest(){
+		return West;
+	}
+	
+	//get total number of active sprinklers in system
+	public int getActive(){
+		int count = 0;
+		count+=North.getActive();
+		count+=South.getActive();
+		count+=East.getActive();
+		count+=West.getActive();
+		return count;
+	}
 }
 
-//	/* methods */
-//	public Water getWater(){
-//		return gWater;
-//	}
-//	
-//	/*usage is in minutes */
-//	public void setTodayG(int runTime, int startTime){
-//		for (int i = startTime ; i < runTime + startTime ; i++){
-//			if (realTemperature.getCurrTemp() <= realTemperature.getMinTemp()){
-//				North.turnOff();
-//				South.turnOff();
-//				West.turnOff();
-//				East.turnOff();
-//				break;
-//			}
-//			if ()
-//		}
-//	}
-//	
-//	
-//	
-//	public void setTodayG(int usage){
-//		gWater.setToday(usage*(North.getActive()+South.getActive()+West.getActive()+East.getActive())*5);
-//		if(realTemperature.getCurrTemp() >= realTemperature.getMaxTemp()){
-//			//run for extra 5 minutes
-//			gWater.setToday(5*(North.getActive()+South.getActive()+West.getActive()+East.getActive())*5);
-////****		/* need to connect to display to show another 5 minutes */
-//		}
-//		if(realTemperature.getCurrTemp() <= realTemperature.getMinTemp()){
-//			North.turnOff();
-//			South.turnOff();
-//			West.turnOff();
-//			East.turnOff();
-//			gWater.setToday(); //repalce 0 with water use based on difference from current time till time supposed to end
-//		}
-//	}
-//	
-//	public int timeDiff (){
-//		Time tempTime = new Time();
-//		int currTime = tempTime.getMinuteTime();
-//		int endTime = getTimeStart() + getTimeRun();
-//		int timeDiffTemp = endTime - currTime;
-//		return timeDiffTemp;
-//	}
-//	
-//}
