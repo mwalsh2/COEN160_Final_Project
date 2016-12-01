@@ -10,35 +10,6 @@ public class Group {
 		s3 = new Sprinkler();
 		s4 = new Sprinkler();
 	}
-
-	// constructor to set a specific sprinkler broken
-	Group(int i){
-		boolean notWorking = false;
-		if (i==1){
-			s1 = new Sprinkler(notWorking);
-			s2 = new Sprinkler();
-			s3 = new Sprinkler();
-			s4 = new Sprinkler();
-		}
-		if (i==2){
-			s1 = new Sprinkler();
-			s2 = new Sprinkler(notWorking);
-			s3 = new Sprinkler();
-			s4 = new Sprinkler();
-		}
-		if (i==3){
-			s1 = new Sprinkler();
-			s2 = new Sprinkler();
-			s3 = new Sprinkler(notWorking);
-			s4 = new Sprinkler();
-		}
-		if (i==4){
-			s1 = new Sprinkler();
-			s2 = new Sprinkler();
-			s3 = new Sprinkler();
-			s4 = new Sprinkler(notWorking);
-		}
-	}
 	
 	/* methods */
 	// turn on sprinklers in group if working
@@ -76,7 +47,7 @@ public class Group {
 		return 0;
 	}
 	
-	// returns true if any sprinkler in group is active 
+	// returns number of active sprinklers 
 	public int getActive(){
 		int count=0; //counts how many sprinklers are on in the group
 		if (s1.getActive())

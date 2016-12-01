@@ -6,6 +6,7 @@ import java.util.Calendar;
 
 public class Water {
 	/* data */
+	// MAKE AN ARRAY 
 	private int day7, day6, day5, day4, day3, day2, today; //day by day water -> day7 is 7 days ago
 	Calendar rightNow = Calendar.getInstance(); //use to work with time
 	int DayOfWeek = rightNow.get(rightNow.DAY_OF_WEEK); //get the day of the week

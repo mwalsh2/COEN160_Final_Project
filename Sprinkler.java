@@ -9,16 +9,6 @@ public class Sprinkler {
 		working = true;
 	}
 	
-	Sprinkler (boolean setting, boolean settingW){
-		active = setting;
-		working = settingW;
-	}
-	
-	Sprinkler (boolean notWorking){
-		working = notWorking;
-		active = false; 
-	}
-	
 	/* methods */
 	public void setActive (boolean setting){
 		active = setting;
